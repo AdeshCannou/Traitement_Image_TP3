@@ -73,9 +73,9 @@ for index in range(328):
                         parameters[(theta, tx, ty)] = parameters.get((theta, tx, ty), 0) + 1
         try:
             max_params = max(parameters, key=parameters.get)
-            print(index, "Parameters with the most votes:", np.degrees(max_params[0]), max_params[1:])
+            print(index, "Parameters with the most votes:", -np.degrees(max_params[0]), max_params[1:])
             angle, txr, tyr = max_params
-            to_write.append(f"{index} {round(txr)} {round(tyr)} {np.degrees(angle):.4f}\n")
+            to_write.append(f"{index} {round(txr)} {round(tyr)} {-np.degrees(angle):.4f}\n")
         except:
             print('No valid parameters')
 

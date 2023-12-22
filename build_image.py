@@ -31,7 +31,7 @@ for i in fragment_data:
 
     M = cv.getRotationMatrix2D(
         (fragment_width / 2, fragment_height / 2),
-        -float(angle),
+        float(angle),
         1,
     )
     fragment = cv.warpAffine(fragment, M, (fragment_width, fragment_height))

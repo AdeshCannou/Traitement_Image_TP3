@@ -81,8 +81,8 @@ for index in range(328):
     tx = dst[0][0] - src[0][0] * np.cos(theta) + src[0][1] * np.sin(theta)
     ty = dst[0][1] - src[0][0] * np.sin(theta) - src[0][1] * np.cos(theta)
         
-    print("Parameters :",f"{index} {round(tx)} {round(ty)} {np.degrees(theta):.4f}")
-    to_write.append(f"{index} {round(tx)} {round(ty)} {np.degrees(theta):.4f}\n")
+    print("Parameters :",f"{index} {round(tx)} {round(ty)} {-np.degrees(theta):.4f}")
+    to_write.append(f"{index} {round(tx)} {round(ty)} {-np.degrees(theta):.4f}\n")
 
 # Écrire les résultats dans un fichier texte
 with open('results2.txt', 'w') as file:
