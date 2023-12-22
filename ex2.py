@@ -28,7 +28,7 @@ for index in range(328):
     img1 = cv.imread(fragment_filename)
     center = (img1.shape[1] // 2, img1.shape[0] // 2)
         
-    # Trouver les keypoints et les descriptors avec SIFT
+    # Trouver les keypoints et les descriptors avec FAST
     kp1 = fast.detect(img1, None)
     kp2 = fast.detect(img2, None)
     kp1, des1 = brisk.compute(img1, kp1)
